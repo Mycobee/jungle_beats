@@ -10,6 +10,6 @@ class LinkedListTest < Minitest::Test
 	end
 
 	def test_it_exists
-		assert_instance_of List, @list
+		assert_instance_of LinkedList, @list
 	end
 end
