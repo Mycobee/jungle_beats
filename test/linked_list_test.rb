@@ -41,8 +41,10 @@ class LinkedListTest < Minitest::Test
 	def test_list_with_head_appends_to_next_node
 		@list.append("doop")
 		@list.append("deep")
+		@list.append("pop")
 
 		assert_equal "doop", @list.head.data
 		assert_equal "deep", @list.head.next_node.data
+		assert_equal "pop", @list.head.next_node.next_node.data
 	end
 end
