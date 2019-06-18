@@ -28,4 +28,9 @@ class LinkedListTest < Minitest::Test
 		@list.append("doop")
 		assert_equal 1, @list.count
 	end
+
+	def test_it_can_convert_the_list_to_string
+		@list.append("doop")
+		assert_equal "doop", @list.to_string
+	end
 end
