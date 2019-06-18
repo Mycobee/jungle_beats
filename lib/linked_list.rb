@@ -14,4 +14,8 @@ class LinkedList
 			count = 1
 		end
 	end
+
+	def to_string
+		head.data
+	end
 end
