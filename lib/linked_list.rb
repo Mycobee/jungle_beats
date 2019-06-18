@@ -6,15 +6,11 @@ class LinkedList
 	end
 
 	def append(data)
-binding.pry
 		if @head.nil?
-binding.pry
 			@head = Node.new(data)
 		else 
 			@head.set_next(data)
-binding.pry
 		end	
-binding.pry
 	end
 
 	def count
