@@ -39,6 +39,6 @@ class LinkedListTest < Minitest::Test
 		@list.append("deep")
 
 		assert_equal "doop", @list.head.data
-		assert_equal "deep". @list.head.next_node.data
+		assert_equal "deep", @list.head.next_node.data
 	end
 end
