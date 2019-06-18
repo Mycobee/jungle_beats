@@ -33,4 +33,12 @@ class LinkedListTest < Minitest::Test
 		@list.append("doop")
 		assert_equal "doop", @list.to_string
 	end
+
+	def test_list_with_head_appends_to_next_node
+		@list.append("doop")
+		@list.append("deep")
+
+		assert_equal "doop", @list.head.data
+		assert_equal "deep". @list.head.next_node.data
+	end
 end
