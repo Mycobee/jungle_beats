@@ -15,4 +15,8 @@ class NodeTest < Minitest::Test
 	def test_it_accepts_initialization_argument_as_data_attribute
 		assert_equal "plop", @node.data
 	end
+
+	def test_it_starts_with_default_nil_next_node
+		assert_nil @node.next_node	
+	end
 end
