@@ -25,6 +25,7 @@ class LinkedListTest < Minitest::Test
 	end
 	
 	def test_it_can_count_things_in_list
+		@list.append("doop")
 		assert_equal 1, @list.count
 	end
 end
