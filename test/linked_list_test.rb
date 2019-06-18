@@ -23,4 +23,8 @@ class LinkedListTest < Minitest::Test
 		assert_instance_of Node, @list.head
 		assert_nil @list.head.next_node
 	end
+	
+	def test_it_can_count_things_in_list
+		assert_equal 1, @list.count
+	end
 end
