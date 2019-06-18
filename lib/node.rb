@@ -6,4 +6,8 @@ class Node
 		@data = data
 		@next_node = nil
 	end
+
+	def set_next(data)
+		@next_node = Node.new(data)
+	end
 end
