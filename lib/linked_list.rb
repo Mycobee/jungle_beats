@@ -13,8 +13,12 @@ class LinkedList
 		end	
 	end
 
+
 	def count
-		if !head.nil?
+		count = 0
+		if !head.nil? && !head.next_node.nil?
+			count = 2
+		elsif !head.nil?
 			count = 1
 		end
 	end
