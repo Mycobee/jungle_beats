@@ -21,7 +21,7 @@ class NodeTest < Minitest::Test
 	end
 
 	def test_it_can_set_next_node
-		@node.set_node("doop")
+		@node.set_next("doop")
 		
 		assert_instance_of Node, @node.next_node
 		assert_equal "doop", @node.next_node.data
