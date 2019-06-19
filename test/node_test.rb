@@ -26,4 +26,10 @@ class NodeTest < Minitest::Test
 		assert_instance_of Node, @node.next_node
 		assert_equal "doop", @node.next_node.data
 	end
+
+	def test_it_can_change_next_node
+		new_node = Node.new("beep")
+		@node.change_next(new_node)
+		assert_equal new_node, @node.next_node
+	end
 end
