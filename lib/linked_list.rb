@@ -59,4 +59,14 @@ class LinkedList
 		end
 		list_string.chop!
 	end
+	
+	def find(index_start, word_count)
+		beat_arry =	to_string.split(" ")
+		index_end = index_start + word_count - 1	
+		find_arry = []
+		index_start.upto(index_end) do |index| 
+			find_arry << beat_arry[index] + " "
+		end
+		find_arry.join.chop!	
+	end
 end
