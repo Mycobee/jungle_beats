@@ -66,4 +66,13 @@ class LinkedListTest < Minitest::Test
 		assert_equal "deep", @list.head.next_node.data
 		assert_equal "pop", @list.head.next_node.next_node.data
 	end
+
+	def test_it_can_prepend_list_with_new_head
+		@list.append("doop")
+		@list.append("deep")
+		@list.prepend("pop")
+		expected = "pop deep doop"
+		
+		assert_equal expected, @list.to_string	
+	end
 end
