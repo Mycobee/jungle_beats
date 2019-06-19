@@ -76,4 +76,14 @@ class LinkedListTest < Minitest::Test
 		
 		assert_equal expected, @list.to_string	
 	end
+
+	def test_it_can_insert_node_in_to_list
+		@list.append("doop")
+		@list.append("bang")	
+		@list.append("pop")
+		expected = "doop wow bang pop"
+		actual = @list.insert(1, "wow")
+		
+		assert_equal expected, actual
+	end
 end
