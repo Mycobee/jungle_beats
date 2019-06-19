@@ -87,4 +87,18 @@ class LinkedListTest < Minitest::Test
 
 		assert_equal expected, actual
 	end
+
+	def test_it_can_find_and_return_elements
+		@list.append("pop")
+		@list.append("doop")
+		@list.append("deep")
+		@list.append("bang")	
+		actual_1 = @list.find(2, 1)
+		expected_1 = "deep"
+		actual_2 = @list.find(1, 3)
+		expected_2 = "doop deep bang"
+
+		assert_equal expected_1, actual_1
+		assert_equal expected_2, actual_2
+	end
 end
