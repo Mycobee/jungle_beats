@@ -10,4 +10,8 @@ class Node
 	def set_next(data)
 		@next_node = Node.new(data)
 	end
+
+	def change_next(node)
+		@next_node = node
+	end
 end
