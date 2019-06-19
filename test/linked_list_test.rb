@@ -101,4 +101,16 @@ class LinkedListTest < Minitest::Test
 		assert_equal expected_1, actual_1
 		assert_equal expected_2, actual_2
 	end
+	
+	def test_it_can_see_words_include?
+		@list.append("pop")
+		@list.append("doop")
+		@list.append("deep")
+		@list.append("bang")	
+		actual_1 = @list.includes?("deep")
+		actual_2 = @list.includes?("wham")
+
+		assert actual_1
+		refute actual_2
+	end
 end
