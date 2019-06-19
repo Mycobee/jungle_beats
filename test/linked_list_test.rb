@@ -81,9 +81,10 @@ class LinkedListTest < Minitest::Test
 		@list.append("doop")
 		@list.append("bang")	
 		@list.append("pop")
+		@list.insert(1, "wow")
 		expected = "doop wow bang pop"
-		actual = @list.insert(1, "wow")
-		
+		actual = @list.to_string	
+
 		assert_equal expected, actual
 	end
 end

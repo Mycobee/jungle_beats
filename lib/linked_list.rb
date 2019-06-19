@@ -26,6 +26,15 @@ class LinkedList
 		end
 		node
 	end
+	
+	def insert(index, data)
+		location_generator = "@head." + ("next_node." * (index - 1))
+		before_node = eval(location_generator.chomp("."))
+		after_node = before_node.next_node
+		insert_node = Node.new(data)
+		before_node.change_next(insert_node)
+		insert_node.change_next(after_node)
+	end
 
 	def count
 		node_array = [] 
