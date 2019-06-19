@@ -70,8 +70,9 @@ class LinkedListTest < Minitest::Test
 	def test_it_can_prepend_list_with_new_head
 		@list.append("doop")
 		@list.append("deep")
+		@list.append("bang")	
 		@list.prepend("pop")
-		expected = "pop deep doop"
+		expected = "pop doop deep bang"
 		
 		assert_equal expected, @list.to_string	
 	end

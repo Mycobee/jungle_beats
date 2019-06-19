@@ -15,9 +15,10 @@ class LinkedList
 
 	def prepend(data)
 		new_head = Node.new(data)
-		new_head.change_next(@node)	
-binding.pry
+		new_head.change_next(@head)	
+		@head = new_head
 	end
+
 	def last_node
 		node = head
 		while !node.next_node.nil?
