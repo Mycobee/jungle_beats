@@ -59,4 +59,27 @@ class LinkedList
 		end
 		list_string.chop!
 	end
+	
+	def find(index_start, word_count)
+		beat_arry =	to_string.split(" ")
+		index_end = index_start + word_count - 1	
+		find_arry = []
+		index_start.upto(index_end) do |index| 
+			find_arry << beat_arry[index] + " "
+		end
+		find_arry.join.chop!	
+	end
+	
+	def includes?(search_word)
+		words = to_string.split(" ")
+		!words.find do |word| 
+			word == search_word
+		end.nil?
+	end
+	
+	def pop
+  index = to_string.split(" ").count
+	node_location = "@head." + ("next_node." * (index - 2)).chop 
+	eval(node_location).delete_next_node
+	end
 end
