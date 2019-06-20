@@ -113,4 +113,16 @@ class LinkedListTest < Minitest::Test
 		assert actual_1
 		refute actual_2
 	end
+	
+	def test_it_can_pop_off_the_last_node
+		@list.append("doop")
+		@list.append("deep")
+		@list.append("bang")	
+		@list.append("pop")
+		@list.pop
+		actual = @list.to_string
+		expected = "doop deep bang"
+
+		assert_equal expected, actual
+	end
 end
