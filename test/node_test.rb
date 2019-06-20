@@ -35,7 +35,9 @@ class NodeTest < Minitest::Test
 
 	def test_it_can_delete_node
 		new_node = Node.new("beep")
-		new_node.delete_node
-		assert_nil new_node
+		new_node.set_next("doop")
+		new_node.delete_next_node
+
+		assert_nil new_node.next_node
 	end
 end

@@ -15,7 +15,7 @@ class Node
 		@next_node = node
 	end
 	
-	def delete_node
-		binding.pry
+	def delete_next_node
+		@next_node = nil
 	end
 end
