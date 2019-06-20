@@ -14,4 +14,8 @@ class Node
 	def change_next(node)
 		@next_node = node
 	end
+	
+	def delete_node
+		binding.pry
+	end
 end

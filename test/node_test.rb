@@ -32,4 +32,10 @@ class NodeTest < Minitest::Test
 		@node.change_next(new_node)
 		assert_equal new_node, @node.next_node
 	end
+
+	def test_it_can_delete_node
+		new_node = Node.new("beep")
+		new_node.delete_node
+		assert_nil new_node
+	end
 end

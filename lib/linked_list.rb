@@ -76,4 +76,10 @@ class LinkedList
 			word == search_word
 		end.nil?
 	end
+	
+	def pop
+  index = to_string.split(" ").count
+	node_location = "@head." + ("next_node." * (index - 1)).chop 
+binding.pry
+	end
 end
