@@ -69,4 +69,11 @@ class LinkedList
 		end
 		find_arry.join.chop!	
 	end
+	
+	def includes?(search_word)
+		words = to_string.split(" ")
+		!words.find do |word| 
+			word == search_word
+		end.nil?
+	end
 end
