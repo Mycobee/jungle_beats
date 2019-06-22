@@ -42,4 +42,12 @@ class JungleBeatTest < Minitest::Test
 
 		assert_equal 6, @jb.count
 	end
+
+	def test_it_can_play_some_sick_beats
+		@jb.append("deep doo ditt woo hoo shu")
+		expected = `say -r 500 "deep doo ditt woo hoo shu"`
+		actual = @jb.play
+	
+		assert_equal expected, actual
+	end
 end
