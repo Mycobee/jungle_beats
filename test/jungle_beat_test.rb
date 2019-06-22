@@ -20,4 +20,23 @@ class JungleBeatTest < Minitest::Test
 		
 		assert_nil @jb.list.head
 	end
+	
+	def test_it_can_append_multiple_beats_in_to_nodes
+		@jb.append("deep doo ditt")
+		expected_1 = "deep"
+		expected_2 = "doo"
+		expected_3 = "ditt"
+		actual_1 = @jb.list.head.data
+		actual_2 = @jb.list.head.next_node.data
+		actual_3 = @jb.list.head.next_node.next_nodedata
+
+		assert_equal expected_1, actual_1
+		assert_equal expected_2, actual_2
+		assert_equal expected_3, actual_3
+
+	end
+		#@jb.append("woo hoo shu")
+
+		#assert_equal 6, jb.count
+		#assert_equal "deep doo ditt woo hoo shu"
 end
