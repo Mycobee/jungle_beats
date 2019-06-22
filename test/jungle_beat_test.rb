@@ -16,8 +16,8 @@ class JungleBeatTest < Minitest::Test
 	end
 
 	def test_it_is_created_with_empty_linked_list
-
-
+		assert_instance_of LinkedList, @jb.list
 		
+		assert_nil @jb.list.head
 	end
 end
