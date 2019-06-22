@@ -78,8 +78,8 @@ class LinkedList
 	end
 	
 	def pop
-  index = to_string.split(" ").count
-	node_location = "@head." + ("next_node." * (index - 2)).chop 
-	eval(node_location).delete_next_node
+  	index = to_string.split(" ").count
+		node_location = "@head." + ("next_node." * (index - 2)).chop 
+		eval(node_location).delete_next_node
 	end
 end
