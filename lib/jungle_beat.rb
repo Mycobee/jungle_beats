@@ -9,4 +9,8 @@ class JungleBeat
 		beat_arry = beat_string.split(" ")
 		beat_arry.each {|beat| list.append(beat)}
 	end
+
+	def count
+		list.count
+	end
 end
