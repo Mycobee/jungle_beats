@@ -28,15 +28,19 @@ class JungleBeatTest < Minitest::Test
 		expected_3 = "ditt"
 		actual_1 = @jb.list.head.data
 		actual_2 = @jb.list.head.next_node.data
-		actual_3 = @jb.list.head.next_node.next_nodedata
+		actual_3 = @jb.list.head.next_node.next_node.data
 
 		assert_equal expected_1, actual_1
 		assert_equal expected_2, actual_2
 		assert_equal expected_3, actual_3
 
 	end
-		#@jb.append("woo hoo shu")
+	
+	def test_it_can_count_all_beats_in_its_list
+		@jb.append("deep doo ditt")
+		@jb.append("woo hoo shu")
 
-		#assert_equal 6, jb.count
-		#assert_equal "deep doo ditt woo hoo shu"
+		assert_equal 6, jb.count
+		assert_equal "deep doo ditt woo hoo shu"
+	end
 end
